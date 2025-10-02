@@ -13,6 +13,7 @@ import PaycheckTable from './components/PaycheckTable';
 import PaycheckSummaryPanel from './components/PaycheckSummaryPanel';
 import EsppSummaryPanel from './components/EsppSummaryPanel';
 import WelcomePage from './components/WelcomePage';
+import Dashboard from './components/Dashboard';
 
 // Key for localStorage
 const STORAGE_KEY = 'investments-tracker-data';
@@ -32,7 +33,7 @@ export default function App() {
   const [hasLoaded, setHasLoaded] = useState(false);
   const [isChatOpen, setIsChatOpen] = useState(false);
   const [isParsing, setIsParsing] = useState(false);
-  const [tab, setTab] = useState<'investments' | 'paychecks'>('investments');
+  const [tab, setTab] = useState<'dashboard' | 'investments' | 'paychecks'>('dashboard');
   const [showWelcome, setShowWelcome] = useState(true);
 
   // Load from Firebase on mount
@@ -212,9 +213,14 @@ export default function App() {
       <h1>💸 Gokul's Investment Tracker</h1>
 
       <div className="tabs" style={{ marginBottom: 16 }}>
+        <button className={tab === 'dashboard' ? 'active' : ''} onClick={() => setTab('dashboard')}>Dashboard</button>
         <button className={tab === 'investments' ? 'active' : ''} onClick={() => setTab('investments')}>Investments</button>
         <button className={tab === 'paychecks' ? 'active' : ''} onClick={() => setTab('paychecks')}>Paychecks</button>
       </div>
+
+      {tab === 'dashboard' && (
+        <Dashboard entries={entries} paystubs={paystubs} />
+      )}
 
       {tab === 'investments' && (
         <>
