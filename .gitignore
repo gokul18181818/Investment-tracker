@@ -1,0 +1,4 @@
+
+# Ignore Vite build output
+Investments tracker/dist/
+

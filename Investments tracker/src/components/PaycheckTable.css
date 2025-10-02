@@ -1,0 +1,78 @@
+.paycheck-wrapper {
+  margin-top: 20px;
+  overflow-x: visible;
+}
+
+.paycheck-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.paycheck-table th,
+.paycheck-table td {
+  padding: 4px 8px;
+  border: 1px solid #ddd;
+  text-align: right;
+  font-size: 0.8rem;
+  white-space: nowrap;
+}
+
+.paycheck-table th {
+  background: #f4f6f8;
+  text-align: center;
+}
+
+.paycheck-table td:first-child,
+.paycheck-table th:first-child {
+  text-align: left;
+}
+
+.paycheck-table tr:nth-child(even) {
+  background: #fafafa;
+}
+
+.group-left {
+  /* Strong vertical divider */
+  box-shadow: inset 3px 0 #000;
+}
+
+.group-right {
+  box-shadow: inset -3px 0 #000;
+}
+
+.num-red {
+  color: #dc2626;
+}
+
+.num-green {
+  color: #16a34a;
+}
+
+.num-yellow {
+  color: #f59e0b;
+}
+
+.num-grey {
+  color: #6b7280;
+}
+
+.legend {
+  font-size: 0.8rem;
+  margin-bottom: 4px;
+}
+
+.legend span {
+  margin-right: 12px;
+  display: inline-flex;
+  align-items: center;
+}
+
+.legend span::before {
+  content: '';
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 2px;
+  margin-right: 4px;
+  background: currentColor;
+} 

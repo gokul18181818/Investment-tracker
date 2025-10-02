@@ -1,0 +1,40 @@
+.paystub-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 1.25rem 1.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  margin-top: 2rem;
+}
+
+.paystub-card h2 {
+  margin-top: 0;
+}
+
+.paystub-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.paystub-card li {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 0;
+  border-bottom: 1px dashed #edf2f7;
+}
+
+.paystub-card li:last-child {
+  border-bottom: none;
+}
+
+.paystub-card a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.paystub-card a:hover {
+  text-decoration: underline;
+} 
